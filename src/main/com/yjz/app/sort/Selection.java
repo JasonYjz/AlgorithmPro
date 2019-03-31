@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Selection implements ISort{
 
     @Override
-    public int[] solution(int[] array) {
+    public void solution(int[] array) {
         for(int i = 0; i < array.length; i++) {
             //寻找[i,n)区间里最小值
             int minIndex = i;
@@ -19,6 +19,5 @@ public class Selection implements ISort{
             SortUtil.swap(array, i, minIndex);
         }
 
-        return array;
     }
 }

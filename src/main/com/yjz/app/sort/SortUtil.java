@@ -24,7 +24,7 @@ public abstract class SortUtil {
 
     public static void printArray(int[] array) {
         for(int i = 0; i < array.length; i++) {
-            System.out.println(String.valueOf(array[i]) + " ");
+            System.out.print(String.valueOf(array[i]) + " ");
         }
     }
 

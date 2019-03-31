@@ -2,7 +2,7 @@ package main.com.yjz.app.sort;
 
 public class Insertion implements ISort {
     @Override
-    public int[] solution(int[] array) {
+    public void solution(int[] array) {
         assert (array != null);
 
         for (int i = 1; i < array.length; i++) {
@@ -20,6 +20,5 @@ public class Insertion implements ISort {
 //
 //            array[j] = e;
         }
-        return array;
     }
 }
