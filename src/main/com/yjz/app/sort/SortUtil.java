@@ -1,5 +1,6 @@
 package main.com.yjz.app.sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public abstract class SortUtil {
@@ -8,6 +9,10 @@ public abstract class SortUtil {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    public static int[] copyIntArray(int[] arr, int n) {
+        return Arrays.copyOf(arr, n);
     }
 
     public static int[] generateRandomArray(int n, int rangeL, int rangeR) {
@@ -32,8 +37,8 @@ public abstract class SortUtil {
         Random ran = new Random();
 
         for (int i = 0; i < swaptimes; i++) {
-            int posx = ran.nextInt()%n;
-            int posy = ran.nextInt()%n;
+            int posx = ran.nextInt(n)%n;
+            int posy = ran.nextInt(n)%n;
 
             swap(arr, posx, posy);
         }
