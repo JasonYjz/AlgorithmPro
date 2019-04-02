@@ -8,7 +8,7 @@ public class Selection implements ISort{
     @Override
     public void solution(int[] array) {
         for(int i = 0; i < array.length; i++) {
-            //寻找[i,n)区间里最小值
+            //search the minimum value at the [i,n) range
             int minIndex = i;
             for (int j = i + 1; j < array.length; j++) {
                 if (array[j] < array[minIndex]) {

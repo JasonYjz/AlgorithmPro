@@ -22,6 +22,25 @@ public abstract class SortUtil {
         return arr;
     }
 
+    public static int[] generateNearlyOrderedArray(int n, int swaptimes) {
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = i;
+        }
+
+        Random ran = new Random();
+
+        for (int i = 0; i < swaptimes; i++) {
+            int posx = ran.nextInt()%n;
+            int posy = ran.nextInt()%n;
+
+            swap(arr, posx, posy);
+        }
+
+        return arr;
+    }
+
     public static void printArray(int[] array) {
         for(int i = 0; i < array.length; i++) {
             System.out.print(String.valueOf(array[i]) + " ");
